@@ -60,7 +60,7 @@ function drawSun() {
   dot(90);
 }
 function drawAllCactuses() {
-  for (var i = 0; i < 3; i++) {
+  for (var i = 0; i < 2; i++) {
     moveTo(randomNumber(-25, 335), 450);
     penDown();
     drawCactus();
