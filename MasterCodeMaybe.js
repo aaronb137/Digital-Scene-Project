@@ -55,7 +55,7 @@ function drawBottomHill() {
   }
 }
 function drawSun() {
-  moveTo(320, 1);
+  moveTo(randomNumber(0, 320), 1);
   penColor("yellow");
   dot(90);
 }
