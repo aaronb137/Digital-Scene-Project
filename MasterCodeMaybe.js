@@ -31,6 +31,7 @@ penUp();
 }
 function drawAllBirds() {
   for (var i = 0; i < 4; i++) {
+    turnTo(-29);
     drawBirds();
   }
 }
@@ -63,6 +64,7 @@ function drawAllCactuses() {
   for (var i = 0; i < 2; i++) {
     moveTo(randomNumber(-25, 335), 450);
     penDown();
+    turnTo(0);
     drawCactus();
     penUp();
     turnLeft(180);
@@ -70,21 +72,15 @@ function drawAllCactuses() {
 }
 function drawCactus() {
   penColor("green");
-  penWidth(10);
+  penWidth(randomNumber(25, 35));
   moveForward(60);
-  arcLeft(90, 25);
-  arcRight(90, 25);
-  moveForward(60);
-  arcRight(180, 15);
-  moveForward(45);
-  arcLeft(180, 10);
-  moveForward(75);
-  arcRight(180, 20);
-  moveForward(125);
-  arcLeft(180, 8);
-  moveForward(45);
-  arcRight(180, 15);
-  moveForward(75);
-  arcRight(90, 25);
-  arcLeft(90, 20);
+  turnTo(90);
+  arcLeft(65, 42);
+  turnTo(0);
+  moveForward(40);
+  moveBackward(40);
+  turnTo(180);
+  moveForward(14);
+  arcRight(65, 20);
+  
 }
