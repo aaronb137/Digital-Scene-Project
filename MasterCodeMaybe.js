@@ -65,6 +65,7 @@ function drawAllCactuses() {
     penDown();
     drawCactus();
     penUp();
+    turnLeft(180);
   }
 }
 function drawCactus() {
