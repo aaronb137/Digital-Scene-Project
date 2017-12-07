@@ -4,11 +4,15 @@ drawAllHills();
 drawSun();
 drawAllCactuses();
 drawAllBirds();
+drawAllRocks();
 
 function drawBirds() {
   moveTo(randomNumber(0, 320),randomNumber(0, 145));
   penDown();
   turnRight(randomNumber(90, 100));
+  drawWings();
+}
+function drawWings() {
   penWidth(7);
   penColor("Black");
   arcLeft(90, 8);
@@ -75,6 +79,11 @@ function drawSkyBackground() {
 function drawCactus() {
   penColor("green");
   penWidth(randomNumber(25, 35));
+  drawLeftHalfCactus();
+  drawRightHalfCactus();
+  drawMiddleCactus();
+}
+function drawLeftHalfCactus() {
   moveForward(60);
   turnTo(90);
   arcLeft(65, 42);
@@ -83,6 +92,8 @@ function drawCactus() {
   moveBackward(40);
   turnTo(180);
   moveForward(14);
+}
+function drawRightHalfCactus() {
   arcRight(90, 15);
   moveForward(60);
   arcRight(90, 10);
@@ -91,6 +102,8 @@ function drawCactus() {
   moveBackward(98);
   turnTo(180);
   turnRight(90);
+}
+function drawMiddleCactus() {
   penUp();
   moveBackward(40);
   turnLeft(90);
@@ -98,3 +111,14 @@ function drawCactus() {
   penWidth(30);
   moveBackward(150);
 }
+function drawAllRocks() {
+  for (var i = 0; i < 4; i++) {
+    drawRock(randomNumber(100, 245));
+  }
+}
+function drawRock(number) {
+  penRGB(number, number, number, 1);
+  moveTo(randomNumber(0, 450), 450);
+  dot(12);
+}
+
